@@ -27,7 +27,7 @@ function! fzfbm#run()
   call fzf#run(fzf#wrap({
         \ 'source': paths,
         \ 'sink*': function('fzfbm#callback'),
-        \ 'options': '--ansi --expect=ctrl-t,ctrl-v,ctrl-x --prompt "Bookmarks > " -d :',
+        \ 'options': '--ansi --delimiter=: --preview="~/.vim/plugged/fzf.vim/bin/preview.sh {}" --preview-window="+{2}-/2" --expect=ctrl-t,ctrl-v,ctrl-x --prompt "Bookmarks > " -d :',
         \ }))
 endfunction
 
