@@ -1,4 +1,4 @@
-if version < 802
+if version < 802 && !has("nvim")
   echoerr "fzf-bookmarks.vim: Please upgrade your vim to 8.2"
   finish
 endif
